@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main {
+        width: 100%;
+        height: 600px;
+        background-image: url(./images/coffee\ background.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+      nav {
+        width: 100%;
+        height: 70px;
+        display: flex;
+      }
+      .left-side-logo {
+        width: 30%;
+        padding-left: 100px;
+      }
+      .right-side-btn {
+        width: 70%;
+        align-content: center;
+      }
+      .right-side-btn > button {
+        border: none;
+        width: 100px;
+        background-color: transparent;
+        color: white;
+        font-weight: bold;
+      }
+      button:hover {
+        cursor: pointer;
+      }
+      .container-1 {
+        background-color: #f0ae8a;
+        width: 100%;
+        height: 400px;
+        text-align: center;
+        padding: 10px;
+      }
+      .box {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .box-1 {
+        border-radius: 40px;
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        align-content: center;
+        background-image: url(./images/coffee\ mocha.jpeg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+      .box-2 {
+        border-radius: 40px;
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        align-content: center;
+        background-image: url(./images/espresso\ americano.jpeg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+      .box-3 {
+        border-radius: 40px;
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        align-content: center;
+        background-image: url(./images/Cappuccino.jpeg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+
+      .box-1 > p {
+        text-align: center;
+        background-color: rgba(4, 4, 4, 0.6);
+        height: 100px;
+        color: white;
+        padding-top: 20px;
+        cursor: pointer;
+      }
+      .box-2 > p {
+        text-align: center;
+        background-color: rgba(237, 239, 241, 0.296);
+        height: 100px;
+        color: white;
+        padding-top: 20px;
+        cursor: pointer;
+      }
+      .box-3 > p {
+        text-align: center;
+        background-color: rgba(237, 239, 241, 0.296);
+        height: 100px;
+        color: white;
+        padding-top: 20px;
+        cursor: pointer;
+      }
+      .container-2 {
+        background-color: #f0ae8a;
+        width: 100%;
+        height: 500px;
+        text-align: center;
+      }
+      .boxes {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        margin-top: 20px;
+        padding-left: 50px;
+      }
+      .boxes-1 {
+        border-radius: 40px;
+        width: 280px;
+        height: 300px;
+        margin: 10px;
+        background-image: url(./images/mocha-green.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #f2ccb7;
+        justify-content: center;
+      }
+      .shake {
+        height: 30px;
+        width: 100px;
+        margin-top: 200px;
+        margin-left: 90px;
+        color: #2f3031;
+        text-align: center;
+        font-weight: bold;
+      }
+      .boxes-2 {
+        border-radius: 40px;
+        width: 280px;
+        height: 300px;
+        margin: 10px;
+        background-image: url(./images/lavender.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #f2ccb7;
+        justify-content: center;
+      }
+      .boxes-3 {
+        border-radius: 40px;
+        width: 280px;
+        height: 300px;
+        margin: 10px;
+        background-image: url(./images/caramel_shake.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #f2ccb7;
+        justify-content: center;
+      }
+      .boxes-4 {
+        border-radius: 40px;
+        width: 280px;
+        height: 300px;
+        margin: 10px;
+        background-image: url(./images/rose-shake.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #f2ccb7;
+        justify-content: center;
+      }
+      .like {
+        height: 30px;
+        width: 100px;
+        margin-top: 10px;
+        margin-left: 10px;
+        padding: 5px;
+        border-radius: 50px;
+        background-color: rgba(240, 248, 255, 0.397);
+        color: #2f3031;
+      }
+      .price {
+        display: inline-block;
+        margin-right: 50px;
+      }
+      .btn {
+        width: 80px;
+        height: 20px;
+        border-radius: 10px;
+        border: none;
+        background-color: #33070760;
+        color: white;
+        cursor: pointer;
+      }
+      .container-3 {
+        background-color: #f0ae8a;
+        width: 100%;
+        height: 600px;
+        text-align: center;
+        padding: 10px;
+      }
+      .box1 {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        margin-top: 20px;
+        padding-left: 50px;
+      }
+
+      .boxx {
+        border-radius: 40px;
+        width: 300px;
+        height: 450px;
+        margin: 10px;
+        background-color: #f2ccb7;
+        margin-right: 100px;
+        align-content: center;
+      }
+      .boxx > img {
+        margin-top: 10px;
+        width: 250px;
+        border-radius: 10px;
+      }
+      .boxx > h2 {
+        text-align: left;
+        margin-left: 10px;
+      }
+      .boxx > p {
+        text-align: justify;
+        margin: 10px;
+      }
+      .boxx > button {
+        display: block;
+        margin-left: 30px;
+        background-color: #f0ae8a;
+        width: 100px;
+        height: 20px;
+        border-radius: 50px;
+        border-color: rgb(240, 248, 255);
+      }
+      footer {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        background-color: #000000;
+        color: white;
+        width: 100%;
+        height: 600px;
+        border: 2px solid black;
+      }
+      .foot1 {
+        width: 100%;
+        margin: 10px;
+        padding: 50px;
+      }
+      .foot1 > ul {
+        list-style: none;
+        margin: 20px;
+        cursor: pointer;
+      }
+      ul > li {
+        margin-bottom: 20px;
+      }
+
+      @media  (min-width: 480px) and (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          align-items: center;
+          height: auto;
+          padding: 10px;
+        }
+
+        .left-side-logo {
+          padding-left: 0;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          margin-bottom: 10px;
+        }
+
+        .right-side-btn {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 10px;
+        }
+
+        .right-side-btn > button {
+          width: auto;
+          margin: 5px;
+        }
+
+        .box,
+        .boxes,
+        .box1 {
+          flex-direction: column;
+          align-items: center;
+          padding: 0;
+        }
+
+        .box-1,
+        .box-2,
+        .box-3,
+        .boxes-1,
+        .boxes-2,
+        .boxes-3,
+        .boxes-4,
+        .boxx {
+          width: 90%;
+          height: auto;
+          margin: 15px 0;
+          background-size: cover;
+        }
+
+        .boxx img {
+          width: 100%;
+          height: auto;
+        }
+
+        .foot1 {
+          padding: 20px;
+          margin: 0;
+          text-align: center;
+        }
+
+        footer {
+          grid-template-columns: 1fr;
+          height: auto;
+        }
+
+        .footer-bottom {
+          grid-column: span 1;
+          padding: 20px;
+          text-align: center;
+        }
+
+        .main {
+          background-size: cover;
+          height: auto;
+        }
+
+        .container-1,
+        .container-2,
+        .container-3 {
+          height: auto;
+          padding: 20px 10px;
+        }
+
+        .shake,
+        .like,
+        .price,
+        .btn {
+          margin-left: 0;
+          text-align: center;
+        }
+
+        .shake {
+          margin-top: 150px;
+        }
+
+        .btn {
+          margin: 10px auto;
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <nav>
+        <div class="left-side-logo">
+          <img width="80px" src="./images/icon.png" alt="" />
+        </div>
+        <div class="right-side-btn">
+          <button>Home</button>
+          <button>Menu</button>
+          <button>Blog</button>
+          <button>Media</button>
+          <button>Contact</button>
+          <i
+            class="fa-solid fa-magnifying-glass fa-xl"
+            style="color: #000000"
+          ></i>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container-1">
+      <h1>TOP CATEGORIES</h1>
+      <p>Explore The Recent Most Bought Drinks This Week.</p>
+      <div class="box">
+        <div class="box-1">
+          <p>Coffee Mocha</p>
+          <p>View More</p>
+        </div>
+        <div class="box-2">
+          <p>Expresso Americano</p>
+          <p>View More</p>
+        </div>
+        <div class="box-3">
+          <p>Cappuccino</p>
+          <p>View More</p>
+        </div>
+      </div>
+    </div>
+    <div class="container-2">
+      <h1>TOP MILK SHAKES</h1>
+      <p>Explore The Recent Most Bought Drinks This Week.</p>
+      <div class="boxes">
+        <div class="boxes-1">
+          <p class="like">
+            <i class="fa-solid fa-thumbs-up" style="color: #2f3031"></i>30 Likes
+          </p>
+          <p class="shake">Mocha Shake</p>
+          <p class="price">$20.00</p>
+          <button class="btn">Buy Now</button>
+        </div>
+        <div class="boxes-2">
+          <p class="like">
+            <i class="fa-solid fa-thumbs-up" style="color: #2f3031"></i>30 Likes
+          </p>
+          <p class="shake">Mocha Shake</p>
+          <p class="price">$20.00</p>
+          <button class="btn">Buy Now</button>
+        </div>
+        <div class="boxes-3">
+          <p class="like">
+            <i class="fa-solid fa-thumbs-up" style="color: #2f3031"></i>30 Likes
+          </p>
+          <p class="shake">Mocha Shake</p>
+          <p class="price">$20.00</p>
+          <button class="btn">Buy Now</button>
+        </div>
+        <div class="boxes-4">
+          <p class="like">
+            <i class="fa-solid fa-thumbs-up" style="color: #2f3031"></i>30 Likes
+          </p>
+          <p class="shake">Mocha Shake</p>
+          <p class="price">$20.00</p>
+          <button class="btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="container-3">
+      <h1>LATEST BLOGS</h1>
+      <p>Explore The Recent Most Bought Drinks This Week.</p>
+      <div class="box1">
+        <div class="boxx">
+          <img src="./images/img-1.jpeg" alt="" />
+          <h2>Coffee Connoisseur</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum minus
+            consectetur aperiam repellat quibusdam vel dignissimos expedita
+            nobis sapiente aut quae, nesciunt, eligendi repellendus repudiandae
+            maiores asperiores excepturi eius voluptates! Vitae, quaerat neque
+            tempora illum, magni mollitia repellendus temporibus voluptatibus
+            ullam quisquam voluptas sed repellat. Nemo voluptatem, animi
+            exercitationem dolor eum, minima et molestias ducimus vel culpa
+            ipsa.
+          </p>
+          <button>Read More</button>
+        </div>
+        <div class="boxx">
+          <img height="140px" src="./images/img-2.jpeg" alt="" />
+          <h2>Coffee Connoisseur</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum minus
+            consectetur aperiam repellat quibusdam vel dignissimos expedita
+            nobis sapiente aut quae, nesciunt, eligendi repellendus repudiandae
+            maiores asperiores excepturi eius voluptates! Vitae, quaerat neque
+            tempora illum, magni mollitia repellendus temporibus voluptatibus
+            ullam quisquam voluptas sed repellat. Nemo voluptatem, animi
+            exercitationem dolor eum, minima et molestias ducimus vel culpa
+            ipsa.
+          </p>
+          <button>Read More</button>
+        </div>
+        <div class="boxx">
+          <img src="./images/img-3.jpeg" alt="" />
+          <h2>Coffee Connoisseur</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum minus
+            consectetur aperiam repellat quibusdam vel dignissimos expedita
+            nobis sapiente aut quae, nesciunt, eligendi repellendus repudiandae
+            maiores asperiores excepturi eius voluptates! Vitae, quaerat neque
+            tempora illum, magni mollitia repellendus temporibus voluptatibus
+            ullam quisquam voluptas sed repellat. Nemo voluptatem, animi
+            exercitationem dolor eum, minima et molestias ducimus vel culpa
+            ipsa.
+          </p>
+          <button>Read More</button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="foot1">
+        <h1>Products</h1>
+        <ul>
+          <li>Shakes</li>
+        </ul>
+      </div>
+      <div class="foot1">
+        <h1>Category</h1>
+        <ul>
+          <li>Men</li>
+          <li>New in</li>
+          <li>Weekly Pick</li>
+        </ul>
+      </div>
+      <div class="foot1">
+        <h1>Company Info</h1>
+        <ul>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Payment Option</li>
+          <li>Track Order</li>
+          <li>Support</li>
+          <li>Vouchers</li>
+          <li>Size Charts</li>
+        </ul>
+      </div>
+      <div class="foot1">
+        <h1>Follow Us</h1>
+        <ul>
+          <li><i class="fa-brands fa-instagram" style="color: #f0ae8a"></i></li>
+          <li><i class="fa-brands fa-facebook" style="color: #f0ae8a"></i></li>
+          <li><i class="fa-brands fa-youtube" style="color: #f0ae8a"></i></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <a href="#">Data settings</a>
+        <a href="#">Cookie settings</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms And Conditions</a>
+        <a href="#">Imprint</a>
+      </div>
+    </footer>
+  </body>
+</html>
